@@ -1,0 +1,20 @@
+<form [formGroup]="customReactiveForm" (ngSubmit)="submit()" class="form-reactive-custom">
+    <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" formControlName="id">
+        <p></p>
+        <label for="name" class="custom-label">Name</label>
+        <input type="text" formControlName="name">
+        <label for="color" class="custom-label">Color</label>
+        <select formControlName="color" id="color">
+            <option value="">Blue</option>
+            <option value="">Red</option>
+            <option value="">Purple</option>
+            <option value="">Yellow</option>
+        </select>
+        <button type="submit" id="btnAdd" class="btn btn-primary">Add</button>
+    </div>
+</form>
+
+
+<app-colored-objects ></app-colored-objects>

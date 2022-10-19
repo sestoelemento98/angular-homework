@@ -1,0 +1,28 @@
+<h1>Student Information</h1>
+<table style="width: 100%;">
+    <tr>
+        <th>StudentID</th>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    <tr *ngFor="let student of studentArray1">
+        <td>
+            {{student.name}}
+        </td>
+        <td>
+            {{student.id}}
+        </td>
+        <td>
+            {{student.address}}
+        </td>
+    </tr>
+    <tr *ngFor="let student of studentArray2">
+        <td>
+            {{student.name}}
+        </td>
+        <td>
+            {{student.id}}
+        </td>
+        <td>{{student.address}}</td>
+    </tr>
+</table>

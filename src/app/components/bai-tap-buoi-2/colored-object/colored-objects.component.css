@@ -1,0 +1,25 @@
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: grey;
+}
+button {
+    margin-left: 3%;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#color-field {
+    display: inline-block;
+}
+
+#select-field {
+    display: inline-block;
+    margin-left: 5%;
+}
+h1 {
+    text-align: center;
+}

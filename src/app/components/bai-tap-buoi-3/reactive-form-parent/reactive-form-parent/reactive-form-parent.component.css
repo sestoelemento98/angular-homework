@@ -1,0 +1,29 @@
+.form-reactive-custom {
+
+    border: 1px solid;
+    border-radius: 10px;
+    height: auto;
+    width: 600px;
+    margin: 10% auto;
+    padding: 10px;
+    position: relative;
+}
+
+.form-group {
+    display: grid;
+}
+
+.custom-label {
+    margin-top: 20px;
+}
+
+#color {
+    height: 30px;
+}
+
+#btnAdd {
+    width: 30%;
+    margin-top: 20px;
+    margin-left: 35%;
+    
+}

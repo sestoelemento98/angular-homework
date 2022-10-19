@@ -1,0 +1,45 @@
+<h1>Colored Objects Components</h1>
+<table style="width: 100%;">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Option</th>
+    </tr>
+    <tr *ngFor="let object of objectArray; let i = index">
+        <td>{{objectArray.indexOf(object) + 1}}</td>
+        <td>
+            {{object.name}}
+            <div *ngIf="!object.isDisabled">
+                <input type="text" [(ngModel)]="object.name">
+            </div>
+            
+        </td>
+        <td>
+            <div [ngSwitch]="object.color" id="color-field">
+                <div *ngSwitchCase="0" [ngStyle]="blueColor">Blue</div>
+                <div *ngSwitchCase="1" [ngStyle]="redColor">Red</div>
+                <div *ngSwitchCase="2" [ngStyle]="purpleColor">Purple</div>
+                <div *ngSwitchCase="3" [ngStyle]="yellowColor">Yellow</div>
+                <div *ngSwitchDefault>Nothing</div>
+            </div>
+
+            <div *ngIf="!object.isDisabled" id="select-field">
+                <select [(ngModel)]="object.color">
+                    <option value="0">Blue</option>
+                    <option value="1">Red</option>
+                    <option value="2">Purple</option>
+                    <option value="3">Yellow</option>
+                </select>
+            </div>
+
+        </td>
+        <td>
+            <button (click)="object.isDisabled = !object.isDisabled" class="btn btn-primary">
+                {{object.isDisabled? 'Edit' : 'Save'}}
+            </button>
+            <button (click)="deleteRow(object)" class="btn btn-danger">Delete</button>
+        </td>
+    </tr>
+</table>
+<app-colored-object-child [objectArray]="objectArray"></app-colored-object-child>

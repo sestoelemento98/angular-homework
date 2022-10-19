@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="element" *ngFor="let element of objectArray" [ngStyle]="{'border-color': getBorderColor(element.color)}">
+        <p>{{objectArray.indexOf(element) + 1}}</p>
+        <p>{{element.name}}</p>
+        <p>{{getColorName(element.color)}}</p>
+        <button class="btn btn-primary" (click)="appendArray(element)">Click me!</button>
+    </div>
+    
+</div>
