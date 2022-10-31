@@ -11,7 +11,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class ColoredObjectsComponent implements OnInit {
  
-  
+  @Input() parentColor!: ColoredObject;
   objectId: number = 0;
   object1: ColoredObject = new ColoredObject(++this.objectId,'Object 1', Color.Blue);
   object2: ColoredObject = new ColoredObject(++this.objectId,'Object 2', Color.Red);

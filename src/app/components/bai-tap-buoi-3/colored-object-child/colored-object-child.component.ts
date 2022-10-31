@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Color } from 'src/app/models/color-list';
 import { ColoredObject } from 'src/app/models/colored-object';
 
@@ -7,13 +7,24 @@ import { ColoredObject } from 'src/app/models/colored-object';
   templateUrl: './colored-object-child.component.html',
   styleUrls: ['./colored-object-child.component.css']
 })
-export class ColoredObjectChildComponent implements OnInit {
+export class ColoredObjectChildComponent implements OnInit, AfterViewChecked{
   @Input() objectArray: ColoredObject[] = [];
-  
+  @Input() childColorObject!: ColoredObject;
+ 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
+    
   }
+  ngAfterViewChecked(): void {
+    console.log(this.childColorObject);
+    
+  }
+  
+  
+ 
+
+
 
   getBorderColor(colorId: number) {
     switch (colorId) {

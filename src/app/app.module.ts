@@ -11,6 +11,10 @@ import { InsertDashComponent } from './components/bai-tap-buoi-2/insert-dash/ins
 import { StudentInfoComponent } from './components/bai-tap-buoi-2/student-info/student-info.component';
 import { ColoredObjectChildComponent } from './components/bai-tap-buoi-3/colored-object-child/colored-object-child.component';
 import { ReactiveFormParentComponent } from './components/bai-tap-buoi-3/reactive-form-parent/reactive-form-parent/reactive-form-parent.component';
+import { ShowErrorPipe } from './pipes/show-error.pipe';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { ReactiveFormParentComponent } from './components/bai-tap-buoi-3/reactiv
     InsertDashComponent,
     StudentInfoComponent,
     ColoredObjectChildComponent,
-    ReactiveFormParentComponent
+    ReactiveFormParentComponent,
+    ShowErrorPipe,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
