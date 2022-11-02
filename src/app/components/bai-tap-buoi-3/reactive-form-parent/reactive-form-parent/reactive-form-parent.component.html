@@ -18,9 +18,9 @@
             <option value="3">Yellow</option>
         </select>
         <div *ngIf="customReactiveForm.controls['color'].errors != null;" [ngStyle]="{color: 'red'}">{{customReactiveForm.controls['color'].errors | showError: 'to-string'}}</div>
-        <button type="submit" id="btnAdd" class="btn btn-primary">Add</button>
+        <button type="submit" id="btnAdd" class="btn btn-primary" [disabled]="!customReactiveForm.valid">Add</button>
     </div>
 </form>
 
 
-<app-colored-objects [parentColor]="parentColoredObject"></app-colored-objects>
+<app-colored-objects [parentColor]="parentColoredObject" ></app-colored-objects>

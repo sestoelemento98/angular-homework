@@ -9,21 +9,20 @@ import { ColoredObject } from 'src/app/models/colored-object';
 })
 export class ColoredObjectChildComponent implements OnInit, AfterViewChecked{
   @Input() objectArray: ColoredObject[] = [];
-  @Input() childColorObject!: ColoredObject;
+
  
   constructor() { }
 
   ngOnInit(): void {    
+
+    
     
   }
   ngAfterViewChecked(): void {
-    console.log(this.childColorObject);
+    console.log(this.objectArray);
     
   }
   
-  
- 
-
 
 
   getBorderColor(colorId: number) {
@@ -60,5 +59,7 @@ export class ColoredObjectChildComponent implements OnInit, AfterViewChecked{
     let newColorObject = new ColoredObject(0, 'Object', Color.Blue)
     Object.assign(newColorObject, colorObject);
     this.objectArray.push(newColorObject);
+    console.log(this.objectArray);
+    
   }
 }

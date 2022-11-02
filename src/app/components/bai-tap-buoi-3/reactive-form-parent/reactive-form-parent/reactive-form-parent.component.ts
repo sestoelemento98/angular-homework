@@ -29,10 +29,12 @@ export class ReactiveFormParentComponent implements OnInit {
 
 
   submit() {
-    this.parentColoredObject.id = this.customReactiveForm.get('id')?.value;
+    this.parentColoredObject.id = Number(this.customReactiveForm.get('id')?.value);
     this.parentColoredObject.name = this.customReactiveForm.get('name')?.value;
-    this.parentColoredObject.color = this.customReactiveForm.get('color')?.value;
-    this.coloredObjectsComponent.objectArray.push(this.parentColoredObject);
+    this.parentColoredObject.color = Number(this.customReactiveForm.get('color')?.value);
+    if (this.customReactiveForm.valid) {
+      this.coloredObjectsComponent.objectArray.push(this.parentColoredObject);
+    }
   }
 
   checkId (control: AbstractControl): ValidationErrors | null {
